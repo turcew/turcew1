@@ -1,0 +1,44 @@
+.ui.text.size-textxs {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ui.text.size-texts {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ui.text.size-textmd {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ui.text.size-textlg {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ui.text {
+  color: #324950;
+  font-family: RobotoSlab;
+}
+
+.ui.heading.size-headingxs {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ui.heading.size-headings {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.ui.heading.size-headingmd {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.ui.heading {
+  color: #57984c;
+  font-family: RobotoSlab;
+}

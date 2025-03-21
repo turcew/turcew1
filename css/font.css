@@ -1,0 +1,35 @@
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoSlabRegular.ttf");
+  font-family: "RobotoSlab";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/HeeboMedium.ttf");
+  font-family: "Heebo";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoSlabBold.ttf");
+  font-family: "RobotoSlab";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoMedium.ttf");
+  font-family: "Roboto";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoRegular.ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+}
