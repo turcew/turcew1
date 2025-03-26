@@ -194,7 +194,7 @@ select:focus-visible {
 }
 
 .columnarrowone {
-  margin-bottom: 32px;
+  margin-bottom: 0px;
   gap: 18px;
   display: flex;
   width: 82%;
