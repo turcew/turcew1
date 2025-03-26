@@ -1,0 +1,652 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto Slab;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  margin-inline: unset !important;
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  background-color: transparent;
+  width: 100%;
+}
+
+[type="text"],
+input:where(:not([type])),
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select,
+button {
+  appearance: none;
+  background-color: transparent;
+  border-color: unset;
+  border-width: 0;
+  border-radius: unset;
+  padding: unset;
+  font-size: unset;
+  line-height: unset;
+  color: inherit;
+}
+input:focus-visible,
+[multiple]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
+.flex-row-center-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tomato-one {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+.columnlogo_one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px 0 #00000026;
+  align-self: stretch;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+}
+
+.header__row {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.header__logo {
+  height: 82px;
+  width: 14%;
+  object-fit: contain;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.header__column {
+  gap: 22px;
+  display: flex;
+  width: 44%;
+  flex-direction: column;
+  align-items: flex-end;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.header__search {
+  color: #324950;
+  padding-left: 12px;
+  font-size: 16px;
+  gap: 16px;
+  display: flex;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  border-bottom: 1px solid #324950;
+}
+
+.dhi-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+}
+
+.search {
+  height: 18px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 18px;
+  object-fit: contain;
+}
+
+.breadcrumbs {
+  height: 1332px;
+  margin-top: -116px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-image: url(../images/TomatoOneBG.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1448px;
+  width: 100%;
+  padding: 134px 56px;
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+    padding: 32px 20px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: 16px 20px;
+  }
+}
+
+.columnarrowone {
+  margin-bottom: 32px;
+  gap: 18px;
+  display: flex;
+  width: 82%;
+  flex-direction: column;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.breadcrumbs__row {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__icon {
+  height: 1px;
+}
+
+.section__column {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-details {
+  gap: 44px;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.tag-details__column {
+  gap: 40px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.tag-details__column--primary {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-details__description {
+  line-height: 142.7%;
+  @media only screen and (max-width: 1050px) {
+    font-size: 34px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 28px;
+  }
+}
+
+.tag-details__description-span {
+  color: #324950;
+}
+
+.tag-details__description-span-1 {
+  color: #57984c;
+}
+
+.tag-details__settings-icon {
+  height: 6px;
+  width: 6%
+}
+
+.tag-details__close-row {
+  gap: 22px;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.tag-details__close-icon {
+  height: 80px;
+  align-self: flex-end;
+  width: 16%;
+  object-fit: contain;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.tag-details__highlight-text {
+  color: #cf2333 !important;
+  width: 78%;
+  line-height: 142.7%;
+  @media only screen and (max-width: 1050px) {
+    font-size: 24px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    font-size: 22px;
+  }
+}
+
+.tag-details__column--secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tag-details__separator {
+  height: 1px;
+  margin-top: 12px;
+  background-color: #57984c;
+  width: 34%;
+}
+
+.tag-details__resistance-text {
+  color: #324950 !important;
+  margin-top: 22px;
+  line-height: 162.7%;
+}
+
+.tag-details__column--tertiary {
+  gap: 30px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.tag-details__image {
+  height: 498px;
+  width: 100%;
+  object-fit: cover;
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.tag-details__download-button {
+  color: #57984c;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 17px;
+  gap: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  height: 54px;
+  min-width: 224px;
+  border-radius: 26px;
+  border: 2px solid #57984c;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.left-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 32px;
+}
+
+.PDF {
+  height: 32px;
+  width: 26px;
+  object-fit: contain;
+}
+
+.plant-details__row {
+  display: flex;
+  align-items: flex-start;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.plant-details__column {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plant-details__title--fruit {
+  color: #57984c !important;
+  margin-top: 30px;
+}
+
+.plant-details__column--secondary {
+  gap: 26px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.plant-details__view-row--cycle {
+  gap: 24px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.plant-details__season-text {
+  color: #324950 !important;
+  width: 10%;
+  line-height: 200%;
+}
+
+.plant-details__color-text {
+  color: #324950 !important;
+}
+
+.footer {
+  display: flex;
+  background-color: #324950;
+}
+
+.footer__column {
+  margin-bottom: 12px;
+  gap: 18px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__column__row {
+  background-color: #2c3f45;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer__column__row__content {
+  width: 58%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.footer__icons {
+  gap: 14px;
+  display: flex;
+}
+
+.footer__copyright {
+  color: #b8b8b8 !important;
+}
+.plant-details__separator--plant {
+  height: 1px;
+  margin-top: 12px;
+  background-color: #57984c;
+  width: 32%;
+}
+
+.product-description-column {
+  margin-top: 22px;
+  gap: 20px;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.product-description-column__text {
+  color: #324950 !important;
+  margin-left: 20px;
+  width: 60%;
+  line-height: 200%;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.product-description-column__column {
+  gap: 26px;
+  display: flex;
+  width: 6px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-description-column__view--three {
+  height: 6px;
+  background-color: #57984c;
+  width: 6px;
+  border-radius: 3px;
+}
+
+.plant-details__column--cycle {
+  gap: 12px;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.breadcrumbs__text {
+  color: #57984c !important;
+}
+
+.plant-details__separator--cycle {
+  height: 1px;
+  background-color: #57984c;
+  width: 34%;
+}
+
+.header__menu {
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__icon {
+  height: 30px;
+}
+
+.ui.text.size-textxs {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.ui.text.size-texts {
+  font-size: 16px;
+  font-weight: 400;
+  @media only screen and (max-width: 1440px) {
+    font-size: 13px;
+  }
+}
+
+.ui.text.size-textmd {
+  font-size: 17px;
+  font-weight: 400;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
+}
+
+.ui.text {
+  color: #ffffff;
+  font-family: Roboto;
+}
+
+.ui.heading.size-textlg {
+  font-size: 18px;
+  font-weight: 500;
+  @media only screen and (max-width: 1440px) {
+    font-size: 15px;
+  }
+}
+
+.ui.heading.size-headingxs {
+  font-size: 20px;
+  font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 17px;
+  }
+}
+
+.ui.heading.size-headings {
+  font-size: 30px;
+  font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    font-size: 28px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 26px;
+  }
+}
+
+.ui.heading.size-headingmd {
+  font-size: 54px;
+  font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 45px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    font-size: 46px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 40px;
+  }
+}
+
+.ui.heading {
+  color: #324950;
+  font-family: Heebo;
+}
+
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoSlabRegular.ttf");
+  font-family: "Roboto Slab";
+  font-weight: 400;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/HeeboMedium.ttf");
+  font-family: "Heebo";
+  font-weight: 500;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoSlabBold.ttf");
+  font-family: "Roboto Slab";
+  font-weight: 700;
+}
+@font-face {
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/RobotoRegular.ttf");
+  font-family: "Roboto";
+  font-weight: 400;
+}
