@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: RobotoSlab;
+  font-family: Roboto Slab;
 }
 
 * {
@@ -86,12 +86,24 @@ select:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .header__logo {
   height: 82px;
   width: 14%;
   object-fit: contain;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .header__column {
@@ -100,6 +112,9 @@ select:focus-visible {
   width: 44%;
   flex-direction: column;
   align-items: flex-end;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .header__search {
@@ -136,12 +151,26 @@ select:focus-visible {
   background-image: url(../images/img_banner.png);
   background-size: cover;
   background-repeat: no-repeat;
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
 }
 
 .imageseven_one {
   height: 480px;
   width: 100%;
   object-fit: cover;
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
 }
 
 .rowagriderafres {
@@ -150,6 +179,15 @@ select:focus-visible {
   padding-right: 56px;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .content {
@@ -157,6 +195,13 @@ select:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
 }
 
 .content__header {
@@ -193,6 +238,16 @@ select:focus-visible {
   max-width: 1066px;
   width: 100%;
   margin-left: auto;
+  @media only screen and (max-width: 1440px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .content__divider {
@@ -200,6 +255,10 @@ select:focus-visible {
   background-color: #eb5757;
   width: 4px;
   border-radius: 2px;
+  @media only screen and (max-width: 1050px) {
+    width: 60px;
+    height: 4px;
+  }
 }
 
 .content__footer-text {
@@ -214,6 +273,15 @@ select:focus-visible {
   padding-right: 56px;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .rowprogramname {
@@ -222,6 +290,20 @@ select:focus-visible {
   display: flex;
   justify-content: center;
   padding: 50px 20px;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .rowprogramname__list {
@@ -231,6 +313,9 @@ select:focus-visible {
   max-width: 1110px;
   margin-left: auto;
   margin-right: auto;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
 }
 
 .columnline_one {
@@ -241,12 +326,24 @@ select:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .rowline {
   gap: 26px;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
 }
 
 .rowline__line {
@@ -254,6 +351,10 @@ select:focus-visible {
   background-color: #eb5757;
   width: 4px;
   border-radius: 2px;
+  @media only screen and (max-width: 1050px) {
+    width: 40px;
+    height: 4px;
+  }
 }
 
 .userprofile {
@@ -262,6 +363,17 @@ select:focus-visible {
   gap: 30px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
+  @media only screen and (max-width: 1440px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media only screen and (max-width: 1050px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .footer {
@@ -292,6 +404,15 @@ select:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  @media only screen and (max-width: 1440px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .footer__icons {
@@ -312,6 +433,10 @@ select:focus-visible {
   display: flex;
   width: 32%;
   flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    margin-bottom: 0px;
+  }
 }
 
 .breeding-program-details__column {
@@ -347,6 +472,13 @@ select:focus-visible {
   height: 320px;
   width: 100%;
   object-fit: cover;
+  @media only screen and (max-width: 1440px) {
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
 }
 
 .user-profile__tag {
@@ -370,6 +502,7 @@ select:focus-visible {
 .header__menu {
   gap: 10px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__icon {
@@ -384,11 +517,17 @@ select:focus-visible {
 .ui.text.size-texts {
   font-size: 16px;
   font-weight: 400;
+  @media only screen and (max-width: 1440px) {
+    font-size: 13px;
+  }
 }
 
 .ui.text.size-textmd {
   font-size: 17px;
   font-weight: 400;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .ui.text {
@@ -399,26 +538,46 @@ select:focus-visible {
 .ui.heading.size-textlg {
   font-size: 18px;
   font-weight: 500;
+  @media only screen and (max-width: 1440px) {
+    font-size: 15px;
+  }
 }
 
 .ui.heading.size-headingxs {
   font-size: 17px;
   font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .ui.heading.size-headings {
   font-size: 20px;
   font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 17px;
+  }
 }
 
 .ui.heading.size-headingmd {
   font-size: 44px;
   font-weight: 700;
+  @media only screen and (max-width: 1440px) {
+    font-size: 37px;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 34px;
+  }
 }
 
 .ui.heading {
   color: #324950;
-  font-family: RobotoSlab;
+  font-family: Roboto Slab;
 }
 
 @font-face {
@@ -439,7 +598,7 @@ select:focus-visible {
   font-display: swap;
   font-style: normal;
   src: url("../fonts/RobotoSlabBold.ttf");
-  font-family: "RobotoSlab";
+  font-family: "Roboto Slab";
   font-weight: 700;
 }
 @font-face {
