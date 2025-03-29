@@ -210,6 +210,10 @@ select:focus-visible {
    padding-left: 420px;
   align-items: left;
   align-items: flex-start;
+    @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .contact-us__settings-icon {
