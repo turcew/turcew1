@@ -95,6 +95,7 @@ select:focus-visible {
   justify-content: center;
   align-items: center;
   padding: 18px;
+  min-height: 118px;
 }
 
 .header__row {
@@ -163,8 +164,8 @@ select:focus-visible {
 }
 
 .breadcrumbs {
-  height: 1332px;
-  margin-top: -116px;
+  margin-top: 0;
+  padding-top: 25px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -177,19 +178,27 @@ select:focus-visible {
   align-items: center;
   max-width: 1448px;
   width: 100%;
-  padding: 134px 56px;
-  @media only screen and (max-width: 1440px) {
-    height: auto;
-    padding: 32px 20px;
-  }
+}
 
-  @media only screen and (max-width: 1050px) {
-    height: auto;
-    padding: 20px;
+/* Адаптивные изменения */
+@media only screen and (max-width: 1440px) {
+  .breadcrumbs {
+    padding-top: 50px;
   }
+}
 
-  @media only screen and (max-width: 550px) {
-    padding: 16px 20px;
+@media only screen and (max-width: 1050px) {
+  .header {
+    min-height: 100px;
+  }
+  .breadcrumbs {
+    padding-top: 110px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .breadcrumbs {
+    padding-top: 120px;
   }
 }
 
@@ -249,11 +258,11 @@ select:focus-visible {
 .tag-details__description {
   line-height: 142.7%;
   @media only screen and (max-width: 1050px) {
-    font-size: 34px;
+    font-size: 14px;
   }
 
   @media only screen and (max-width: 550px) {
-    font-size: 28px;
+    font-size: 8px;
   }
 }
 
@@ -483,29 +492,20 @@ select:focus-visible {
   gap: 20px;
   align-self: stretch;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   @media only screen and (max-width: 550px) {
-    flex-direction: column;
-  }
-}
-
-.product-description-column__text {
-  color: #324950 !important;
-  margin-left: 20px;
-  width: 60%;
-  line-height: 200%;
-  @media only screen and (max-width: 550px) {
-    width: 100%;
-    margin-left: 0px;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 
 .product-description-column__column {
   gap: 26px;
   display: flex;
-  width: 6px;
+  width: auto;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .product-description-column__view--three {
@@ -515,12 +515,28 @@ select:focus-visible {
   border-radius: 3px;
 }
 
-.plant-details__column--cycle {
-  gap: 12px;
-  display: flex;
+.product-description-column__text {
+  color: #324950 !important;
+  margin-left: 20px;
+  width: auto;
+  line-height: 200%;
+  @media only screen and (max-width: 550px) {
+    margin-left: 20px;
+    width: auto;
+  }
+}
+
+.plant-details__view-row--cycle {
+  gap: 24px;
   align-self: stretch;
-  flex-direction: column;
+  display: flex;
   align-items: flex-start;
+}
+
+.plant-details__season-text {
+  color: #324950 !important;
+  width: auto;
+  line-height: 200%;
 }
 
 .breadcrumbs__text {
