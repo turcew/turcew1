@@ -5,11 +5,9 @@
     <title>Tomato one</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="theme-color" content="#000000"/>
-    <meta
-      name="Tomato one"
-      content="Tomato one"
-    />
+    <meta name="Tomato one" content="Tomato one"/>
     <link rel="stylesheet" type="text/css" href="./css/Tomatoone.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
     <div class="tomato-one">
@@ -65,109 +63,81 @@
             <div class="columnarrowone">
               <div class="breadcrumbs__row">
                 <img src="images/breadcrumbs.png" alt="Arrowone" class="breadcrumbs__icon"/>
-				<a href="tomatoAll.html">
+                <a href="TomatoAll.html">
                   <p class="breadcrumbs__text ui text size-textxs">Return to all tomatoes</p>
-				</a>
+                </a>
               </div>
               <div>
                 <div class="section__column">
-                  <div class="tag-details">
-                    <div class="tag-details__column">
-                      <div class="tag-details__column--primary">
-                        <h1 class="tag-details__description ui heading size-headingmd">
-                          <span class="tag-details__description-span"> TAG 1002 (TAG 809)<br/></span>
-                          <span class="tag-details__description-span-1">
-                            Tomato Determinate<br/>Red Standard Round</span>
-                        </h1>
-                        <img src="images/CrossNew.png" alt="Cross" class="tag-details__settings-icon"/>
-                        <div class="tag-details__close-row">
-                          <img src="images/red.png" alt="red" class="tag-details__close-icon"/>
-                          <h2 class="tag-details__highlight-text ui heading size-headings">
-                            Very high yield and excellent fruits quality!
-                          </h2>
-                        </div>
-                      </div>
-                      <div class="tag-details__column--secondary">
-                        <h3 class="breadcrumbs__text ui heading size-headingxs">CHARACTERISTICS</h3>
-                        <div class="tag-details__separator"></div>
-                        <p class="tag-details__resistance-text ui text size-textmd">
-                          Resistance<br/>HR: ToMV:0-2; Fol: 1,2; Ve/Vd; <br/>IR: TYLCV
-                        </p>
-                      </div>
-                    </div>
-                    <div class="tag-details__column--tertiary">
-                      <img src="images/TomatoOnemain.jpg" alt="Imagethree" class="tag-details__image"/>
-                      <button class="flex-row-center-center tag-details__download-button">
-                        <div class="left-icon-wrapper">
-                          <img src="images/ico_pdf.png" alt="PDF" class="PDF"/>
-                        </div>
-                        <span> Download pdf</span>
-                      </button>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="plant-details__row">
-                      <div class="plant-details__column">
-                        <h4 class="breadcrumbs__text ui heading size-headingxs">Plant</h4>
-                        <div class="plant-details__separator--plant"></div>
-                        <div class="product-description-column">
-					  <div class="product-description-column__item">
-						<div class="product-description-column__column">
-						  <div class="product-description-column__view--three"></div>
-						</div>
-						<p class="product-description-column__text">
-						  Strong vigor that provides good leaf coverage.
-						</p>
-					  </div>
-					  <div class="product-description-column__item">
-						<div class="product-description-column__column">
-						  <div class="product-description-column__view--three"></div>
-						</div>
-						<p class="product-description-column__text">
-						  Very high productivity with good fruit setting.
-						</p>
-					  </div>
-					  <div class="product-description-column__item">
-						<div class="product-description-column__column">
-						  <div class="product-description-column__view--three"></div>
-						</div>
-						<p class="product-description-column__text">
-						  Early matured variety.
-						</p>
-					  </div>
-					</div>
-                        <h5 class="plant-details__title--fruit ui heading size-headingxs">Fruit</h5>
-                        <div class="plant-details__separator--plant"></div>
-                        <div class="product-description-column">
-                          <div class="product-description-column__column">
-                            <div class="product-description-column__view--three"></div>
-                            <div class="product-description-column__view--three"></div>
-                            <div class="product-description-column__view--three"></div>
+                  <div id="app">
+                    <div class="tag-details">
+                      <div class="tag-details__column">
+                        <div class="tag-details__column--primary">
+                          <h1 class="tag-details__description ui heading size-headingmd">
+                            <span class="tag-details__description-span">{{ product.title }}<br/></span>
+                            <span class="tag-details__description-span-1">
+                              Tomato Determinate<br/>Red Standard Round
+                            </span>
+                          </h1>
+                          <img src="images/CrossNew.png" alt="Cross" class="tag-details__settings-icon"/>
+                          <div class="tag-details__close-row">
+                            <img src="images/red.png" alt="red" class="tag-details__close-icon"/>
+                            <h2 class="tag-details__highlight-text ui heading size-headings">
+                              Very high yield and excellent fruits quality!
+                            </h2>
                           </div>
-                          <p class="product-description-column__text ui text size-textmd">
-                            Long shelf life on plant and post harvest.<br/>Nice shiny attractive deep red color.<br/>Average
-                            fruit size: 140 – 160 grams.
+                        </div>
+                        <div class="tag-details__column--secondary">
+                          <h3 class="breadcrumbs__text ui heading size-headingxs">CHARACTERISTICS</h3>
+                          <div class="tag-details__separator"></div>
+                          <p class="tag-details__resistance-text ui text size-textmd">
+                            Resistance<br/>HR: ToMV:0-2; Fol: 1,2; Ve/Vd; <br/>IR: TYLCV
                           </p>
                         </div>
                       </div>
-                      <div class="plant-details__column--secondary">
-                        <div class="plant-details__column--cycle">
-                          <h6 class="breadcrumbs__text ui heading size-headingxs">Cycle</h6>
-                          <div class="plant-details__separator--cycle"></div>
-                        </div>
-                        <div class="plant-details__view-row--cycle">
-                          <div class="product-description-column__column">
-                            <div class="product-description-column__view--three"></div>
-                            <div class="product-description-column__view--three"></div>
-                            <div class="product-description-column__view--three"></div>
+                      <div class="tag-details__column--tertiary">
+                        <img :src="'../ПР2/assets/img/' + product.image" alt="Imagethree" class="tag-details__image"/>
+                        <a class="pdf" href="#" @click.prevent="addToCart(product.id)" v-if="btnVisible === 0">Add to cart</a>
+                        <a class="pdf" href="ContactUs.html" v-if="btnVisible === 1">Go to cart</a>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="plant-details__row">
+                        <div class="plant-details__column">
+                          <h4 class="breadcrumbs__text ui heading size-headingxs">Plant</h4>
+                          <div class="plant-details__separator--plant"></div>
+                          <div class="product-description-column">
+                            <p class="product-description-column__text ui text size-textmd">
+                              {{ product.desc }}
+                            </p>
                           </div>
-                          <p class="plant-details__season-text ui text size-textmd">Spring<br />Fall <br />Winter</p>
+                          <h5 class="plant-details__title--fruit ui heading size-headingxs">Fruit</h5>
+                          <div class="plant-details__separator--plant"></div>
+                          <div class="product-description-column">
+                            <p class="product-description-column__text ui text size-textmd">
+                              {{ product.desc }}
+                            </p>
+                          </div>
                         </div>
-                        <div class="plant-details__column--cycle">
-                          <h5 class="breadcrumbs__text ui heading size-headingxs">Color</h5>
-                          <div class="plant-details__separator--cycle"></div>
+                        <div class="plant-details__column--secondary">
+                          <div class="plant-details__column--cycle">
+                            <h6 class="breadcrumbs__text ui heading size-headingxs">Cycle</h6>
+                            <div class="plant-details__separator--cycle"></div>
+                          </div>
+                          <div class="plant-details__view-row--cycle">
+                            <div class="product-description-column__column">
+                              <div class="product-description-column__view--three"></div>
+                              <div class="product-description-column__view--three"></div>
+                              <div class="product-description-column__view--three"></div>
+                            </div>
+                            <p class="plant-details__season-text ui text size-textmd">Spring<br />Fall <br />Winter</p>
+                          </div>
+                          <div class="plant-details__column--cycle">
+                            <h5 class="breadcrumbs__text ui heading size-headingxs">Color</h5>
+                            <div class="plant-details__separator--cycle"></div>
+                          </div>
+                          <p class="plant-details__color-text ui text size-textmd">Red</p>
                         </div>
-                        <p class="plant-details__color-text ui text size-textmd">Red</p>
                       </div>
                     </div>
                   </div>
@@ -219,11 +189,11 @@
                   </li>
                 </ul>
                 <div class="footer__icons">
-                <img src="images/Ico_in.png" alt="Instagram" class="footer__icon"/>
-                <img src="images/Ico_inst.png" alt="Instagram2" class="footer__icon"/>
-                <img src="images/Ico_tube.png" alt="Youtube" class="footer__icon"/>
-                <img src="images/Ico_tw.png" alt="Twitter" class="footer__icon"/>
-                <img src="images/Ico_fb.png" alt="Facebook" class="footer__icon"/>
+                  <img src="images/Ico_in.png" alt="Instagram" class="footer__icon"/>
+                  <img src="images/Ico_inst.png" alt="Instagram2" class="footer__icon"/>
+                  <img src="images/Ico_tube.png" alt="Youtube" class="footer__icon"/>
+                  <img src="images/Ico_tw.png" alt="Twitter" class="footer__icon"/>
+                  <img src="images/Ico_fb.png" alt="Facebook" class="footer__icon"/>
                 </div>
               </div>
             </div>
@@ -232,5 +202,56 @@
         </footer>
       </div>
     </div>
+    <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        products: [
+          { id: 1, title: "Prod 1", short_text: "Fresh green onion variety", image: "green_onion_1.jpg", desc: "A high-quality green onion with excellent flavor and disease resistance." },
+          { id: 2, title: "Prod 2", short_text: "Organic green onion", image: "green_onion_2.jpg", desc: "Organically grown green onion, perfect for salads." },
+          { id: 3, title: "Prod 3", short_text: "Long-stem green onion", image: "green_onion_3.jpg", desc: "Long-stem variety ideal for cooking and garnishing." },
+          { id: 4, title: "Prod 4", short_text: "Disease-resistant green onion", image: "green_onion_4.jpg", desc: "Resistant to common pests and diseases." },
+          { id: 5, title: "Prod 5", short_text: "Premium green onion", image: "green_onion_5.jpg", desc: "Premium quality green onion for commercial use." }
+        ],
+        product: [],
+        btnVisible: 0
+      },
+      mounted: function() {
+        this.getProduct();
+        this.checkInCart();
+      },
+      methods: {
+        getProduct: function() {
+          var id = window.location.hash.replace('#', '');
+          if (id && this.products.length > 0) {
+            for (var i in this.products) {
+              if (this.products[i].id == id) {
+                this.product = this.products[i];
+                break;
+              }
+            }
+          }
+        },
+        addToCart: function(id) {
+          var cart = [];
+          if (window.localStorage.getItem('cart')) {
+            cart = window.localStorage.getItem('cart').split(',');
+          }
+          if (cart.indexOf(String(id)) === -1) {
+            cart.push(id);
+            window.localStorage.setItem('cart', cart.join(','));
+          }
+          this.btnVisible = 1;
+        },
+        checkInCart: function() {
+          if (this.product && this.product.id && window.localStorage.getItem('cart')) {
+            var cart = window.localStorage.getItem('cart').split(',');
+            if (cart.indexOf(String(this.product.id)) !== -1) this.btnVisible = 1;
+          }
+        }
+      }
+    });
+    </script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'929fda514f7d44f9',t:'MTc0MzU5MTk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
   </body>
 </html>
