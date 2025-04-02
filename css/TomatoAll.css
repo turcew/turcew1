@@ -1,3 +1,52 @@
+.row-custom {
+  margin-top: 30px;
+  padding-left: 800px;
+  padding-right: 56px;
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 1050px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+#article {
+  width: 60%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
+}
+
+.tomatoList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tomatoItem {
+  width: 200px;
+    height: 200px;
+    object-fit: cover;
+	display: block;
+    margin: auto;
+}
+
+.tomatoImg img {
+  width: 100%;
+  height: auto;
+}
+
+.tomatoInfo {
+  padding: 10px;
+  text-align: center;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -68,7 +117,7 @@ select:focus-visible {
 }
 
 .tomato-all {
-  background-color: #fbf0f0;
+  background-color: #F0FFF0;
   width: 100%;
 }
 
@@ -319,22 +368,24 @@ select:focus-visible {
 }
 
 .columnline_one {
-  margin-top: 40px;
-  padding-left: 56px;
-  padding-right: 56px;
-  gap: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media only screen and (max-width: 1050px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media only screen and (max-width: 550px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    margin-top: 40px;
+    padding-left: 56px;
+    padding-right: 56px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 60px;
+    @media only screen and (max-width: 1050px) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+    }
+    @media only screen and (max-width: 550px) {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 30px;
+    }
 }
 
 .rowline {
@@ -358,28 +409,30 @@ select:focus-visible {
 }
 
 .userprofile {
-  width: 60%;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  justify-content: center;
-  @media only screen and (max-width: 1440px) {
+    width: 60%;
+    display: grid;
+    gap: 30px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  @media only screen and (max-width: 1050px) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @media only screen and (max-width: 550px) {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
+    justify-content: center;
+    margin: 0 auto; /* Центрує весь блок по горизонталі */
+    @media only screen and (max-width: 1440px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media only screen and (max-width: 1050px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @media only screen and (max-width: 550px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        width: 80%;
+    }
 }
 
 .footer {
-  margin-top: 50px;
-  display: flex;
-  background-color: #324950;
+    margin-top: 50px;
+    display: flex;
+    background-color: #324950;
+    width: 100%;
+    clear: both;
 }
 
 .footer__column {
