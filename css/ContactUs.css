@@ -1,3 +1,109 @@
+.cart-table {
+    margin-top: 30px;
+    padding-left: 56px;
+    padding-right: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 1050px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.cart-table table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 24px 0 #00000026;
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d9d9d9;
+    color: #324950;
+    font-family: Roboto Slab;
+    font-size: 16px;
+    @media only screen and (max-width: 1440px) {
+        font-size: 14px;
+    }
+}
+
+.cart-table th {
+    background-color: #57984c;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.cart-table .remove-icon {
+    cursor: pointer;
+    color: #cf2333;
+    font-size: 20px;
+    font-weight: bold;
+    @media only screen and (max-width: 550px) {
+        font-size: 16px;
+    }
+}
+
+.cart-table p {
+    color: #324950;
+    font-family: Roboto Slab;
+    font-size: 17px;
+    margin: 10px 0;
+    @media only screen and (max-width: 1440px) {
+        font-size: 14px;
+    }
+}
+
+.order-submitted {
+    width: 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 24px 0 #00000026;
+    border-radius: 10px;
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+}
+
+.order-submitted h3 {
+    color: #57984c;
+    font-family: Roboto Slab;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 1440px) {
+        font-size: 17px;
+    }
+}
+
+.order-submitted p {
+    color: #324950;
+    font-family: Roboto Slab;
+    font-size: 17px;
+    line-height: 150%;
+    margin: 10px 0;
+    @media only screen and (max-width: 1440px) {
+        font-size: 14px;
+    }
+}
+
+.order-submitted strong {
+    color: #57984c;
+    font-weight: 700;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -210,7 +316,8 @@ select:focus-visible {
    padding-left: 420px;
   align-items: left;
   align-items: flex-start;
-    @media only screen and (max-width: 1050px) {
+  
+  @media only screen and (max-width: 1050px) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -556,7 +663,6 @@ input:valid {
   border: 1px solid #d9d9d9 !important;
 }
 
-/*------Selectbox CSS------*/
 .ui.selectbox.round {
   border-radius: 10px;
 }
@@ -692,6 +798,7 @@ input:valid {
 .ui.heading.size-headings {
   font-size: 44px;
   font-weight: 700;
+  align-items: left;
   @media only screen and (max-width: 1440px) {
     font-size: 37px;
   }
