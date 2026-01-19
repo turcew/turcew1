@@ -1,161 +1,125 @@
-.login-container {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.login-form {
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f8f9fa;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.w40 {
+    width: 40%;
+    min-width: 420px;
     background: white;
-    padding: 40px 30px;
-    border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.login-title {
-    color: #333;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    color: #555;
-    margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.input-group {
+.w60 {
+    width: 60%;
     position: relative;
+    overflow: hidden;
+}
+
+#right-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.header {
+    padding: 30px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.wrapper-flex {
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
-.input-group .fa {
-    position: absolute;
-    left: 15px;
-    color: #999;
-    font-size: 16px;
-    z-index: 2;
+.w40-logo img {
+    height: 38px;
+    width: auto;
 }
 
-.form-control {
+.w60.ar {
+    flex: 1;
+    text-align: right;
+}
+
+.w60 h1 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.inner-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+    max-width: 480px;
+    margin: 0 auto;
     width: 100%;
-    padding: 12px 15px 12px 45px;
-    border: 2px solid #e1e1e1;
-    border-radius: 6px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    background-color: #f9f9f9;
 }
 
-.form-control:focus {
+.row {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
     outline: none;
-    border-color: #667eea;
-    background-color: white;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
-.btn-login {
+.btn {
     width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px;
+    background: #10b981;
     color: white;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
+    transition: background 0.25s;
 }
 
-.btn-login:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-}
-
-.btn-login:active {
-    transform: translateY(0);
-}
-
-.forgot-password {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.forgot-password a {
-    color: #667eea;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-
-.forgot-password a:hover {
-    color: #764ba2;
-    text-decoration: underline;
-}
-
-/* Адаптивные стили */
-@media (max-width: 480px) {
-    .login-form {
-        padding: 30px 20px;
-        margin: 10px;
-    }
-    
-    .login-title {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-    
-    .form-control {
-        padding: 10px 12px 10px 40px;
-        font-size: 14px;
-    }
-}
-
-/* Стили для статусов */
-.error-message {
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 5px;
-    text-align: left;
-}
-
-.success-message {
-    color: #27ae60;
-    font-size: 14px;
-    margin-top: 5px;
-    text-align: left;
-}
-
-/* Анимация появления формы */
-.login-form {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn:hover {
+    background: #059669;
 }
