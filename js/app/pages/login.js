@@ -34,6 +34,39 @@ export const login = {
     },
     template:`
     <div class="flex">
-        asdsadsa
+        <msg ref="msg"/>
+        <div id="left-area" class="w40">
+            <div class="header">
+                <div class="wrapper-flex">
+                    <div class="w40-logo">
+                        <img :src="parent.url+'/app/views/images/logo.svg'" />
+                    </div>
+                    <div class="w60 ar">
+                        <h1>Dreamview Affiliate Sign in</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form inner-form p20" :class="{hs:hs==1}">
+                <form @submit.prevent="login()" v-if="parent.formData">
+                    <div class="row">
+                        <label>Email</label>
+                        <input type="email" v-model="parent.formData.email" required>
+                    </div>
+
+                    <div class="row">
+                        <label>Password</label>
+                        <input type="password" v-model="parent.formData.password" required autocomplete="on">
+                    </div>
+
+                    <div class="row">
+                        <button class="btn">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="right-area" class="w60">
+            <img :src="parent.url+'app/views/images/Cover_'+img+'.jpg'" />
+        </div>
     </div>
 `};
