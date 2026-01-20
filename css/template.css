@@ -16,47 +16,49 @@
             width: 100vw;
         }
 
+        /* Ліва частина — фото */
         #left-area {
             width: 60%;
             min-height: 100vh;
             background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
-            position: relative;
         }
 
+        /* Права частина */
         #right-area {
             width: 40%;
             background: white;
-            position: relative;
-            padding: 32px 40px;
             display: flex;
             flex-direction: column;
         }
 
+        /* Темний прямокутник зверху */
         .top-bar {
+            background: #262d38;
+            padding: 20px 32px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 48px;
+            color: white;
         }
 
         .top-bar h1 {
-            font-size: 1.65rem;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: #111827;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
         .top-bar .logo img {
-            height: 48px;
+            height: 42px;
             width: auto;
         }
 
-        .inner-form {
-            max-width: 100%;
+        /* Контент форми (нижче прямокутника) */
+        .form-container {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 40px 32px;
         }
 
         .form .row {
@@ -65,40 +67,72 @@
 
         .form label {
             display: block;
-            margin-bottom: 9px;
-            font-size: 0.98rem;
+            margin-bottom: 8px;
+            font-size: 0.97rem;
             font-weight: 500;
             color: #1f2937;
         }
 
         .form input {
             width: 100%;
-            padding: 15px 16px;
-            font-size: 1.08rem;
+            padding: 14px 16px;
+            font-size: 1.06rem;
             border: 1px solid #d1d5db;
-            border-radius: 10px;
+            border-radius: 8px;
             outline: none;
-            transition: all 0.15s;
+            transition: border-color 0.15s, box-shadow 0.15s;
         }
 
         .form input:focus {
             border-color: #10b981;
-            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
         }
 
         .btn {
             width: 100%;
-            padding: 16px;
-            font-size: 1.12rem;
+            padding: 15px;
+            font-size: 1.1rem;
             font-weight: 600;
             color: white;
             background: #10b981;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: background 0.2s;
         }
 
         .btn:hover {
             background: #059669;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 1024px) {
+            .flex {
+                flex-direction: column;
+            }
+            #left-area {
+                width: 100%;
+                min-height: 50vh;
+            }
+            #right-area {
+                width: 100%;
+            }
+            .form-container {
+                padding: 40px 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .top-bar {
+                padding: 16px 24px;
+            }
+            .top-bar h1 {
+                font-size: 1.35rem;
+            }
+            .top-bar .logo img {
+                height: 36px;
+            }
+            .form-container {
+                padding: 32px 24px;
+            }
         }
