@@ -33,18 +33,17 @@ export const login = {
         },
     },
     template:`
-    <div class="flex">
     <div id="left-area"></div>
 
     <div id="right-area">
         <div class="top-bar">
-            <h1>Dreamview Affiliate Sign in</h1>
+            <h1>Affiliate Sign in</h1>
             <div class="logo">
-                <img src="app/views/images/logo.svg" alt="Dreamview Logo" />
+                <img src="app/views/images/logo.svg" alt="Logo" />
             </div>
         </div>
 
-        <div class="inner-form">
+        <div class="form-container">
             <form class="form">
                 <div class="row">
                     <label>Email</label>
@@ -65,4 +64,5 @@ export const login = {
 </div>
 
 `};
+
 
