@@ -33,40 +33,40 @@ export const login = {
         },
     },
     template:`
-    <div class="flex">
-        <msg ref="msg"/>
-        <div id="left-area" class="w40">
-            <div class="header">
-                <div class="wrapper-flex">
-                    <div class="w40-logo">
-                        <img :src="parent.url+'/app/views/images/logo.svg'" />
-                    </div>
-                    <div class="w60 ar">
-                        <h1>Dreamview Affiliate Sign in</h1>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
 
-            <div class="form inner-form p20" :class="{hs:hs==1}">
-                <form @submit.prevent="login()" v-if="parent.formData">
-                    <div class="row">
-                        <label>Email</label>
-                        <input type="email" v-model="parent.formData.email" required>
-                    </div>
+  <div class="left-area">
+    <img class="bg-image" src="app/views/images/Cover_4.jpg" alt="background">
+  </div>
 
-                    <div class="row">
-                        <label>Password</label>
-                        <input type="password" v-model="parent.formData.password" required autocomplete="on">
-                    </div>
-
-                    <div class="row">
-                        <button class="btn">Sign in</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div id="right-area" class="w60">
-            <img :src="parent.url+'app/views/images/Cover_'+img+'.jpg'" />
-        </div>
+  <div class="right-area">
+    <div class="right-header">
+      <div class="logo">
+        <img src="app/views/images/logo.svg" alt="Dreamview Logo">
+      </div>
+      <h1>Dreamview Affiliate Sign in</h1>
     </div>
+
+    <div class="form-wrapper">
+      <div class="form-inner">
+        <form action="/site/login" method="POST">
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Sign in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 `};
