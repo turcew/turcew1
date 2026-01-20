@@ -16,14 +16,12 @@
             width: 100vw;
         }
 
-        /* Ліва частина — фото */
         #left-area {
             width: 60%;
             min-height: 100vh;
             background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
         }
 
-        /* Права частина */
         #right-area {
             width: 40%;
             background: white;
@@ -31,7 +29,6 @@
             flex-direction: column;
         }
 
-        /* Темний прямокутник зверху */
         .top-bar {
             background: #262d38;
             padding: 20px 32px;
@@ -52,7 +49,6 @@
             width: auto;
         }
 
-        /* Контент форми (нижче прямокутника) */
         .form-container {
             flex: 1;
             display: flex;
@@ -103,36 +99,4 @@
 
         .btn:hover {
             background: #059669;
-        }
-
-        /* Адаптивність */
-        @media (max-width: 1024px) {
-            .flex {
-                flex-direction: column;
-            }
-            #left-area {
-                width: 100%;
-                min-height: 50vh;
-            }
-            #right-area {
-                width: 100%;
-            }
-            .form-container {
-                padding: 40px 28px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .top-bar {
-                padding: 16px 24px;
-            }
-            .top-bar h1 {
-                font-size: 1.35rem;
-            }
-            .top-bar .logo img {
-                height: 36px;
-            }
-            .form-container {
-                padding: 32px 24px;
-            }
         }
