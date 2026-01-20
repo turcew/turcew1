@@ -19,6 +19,7 @@ html, body {
 #left-area {
     width: 60%;
     min-height: 100vh;
+    display: flex;
     background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
 }
 
@@ -100,3 +101,4 @@ html, body {
 .btn:hover {
     background: #059669;
 }
+
