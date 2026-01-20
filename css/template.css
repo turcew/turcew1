@@ -100,3 +100,33 @@
         .btn:hover {
             background: #059669;
         }
+        @media (max-width: 1024px) {
+            .flex {
+                flex-direction: column;
+            }
+            #left-area {
+                width: 100%;
+                min-height: 50vh;
+            }
+            #right-area {
+                width: 100%;
+            }
+            .form-container {
+                padding: 40px 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .top-bar {
+                padding: 16px 24px;
+            }
+            .top-bar h1 {
+                font-size: 1.35rem;
+            }
+            .top-bar .logo img {
+                height: 36px;
+            }
+            .form-container {
+                padding: 32px 24px;
+            }
+        }
