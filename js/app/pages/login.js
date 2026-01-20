@@ -33,40 +33,36 @@ export const login = {
         },
     },
     template:`
-    <div class="container">
+    <div class="flex">
+    <div id="left-area"></div>
 
-  <div class="left-area">
-    <img class="bg-image" src="app/views/images/Cover_4.jpg" alt="background">
-  </div>
+    <div id="right-area">
+        <div class="top-bar">
+            <h1>Dreamview Affiliate Sign in</h1>
+            <div class="logo">
+                <img src="app/views/images/logo.svg" alt="Dreamview Logo" />
+            </div>
+        </div>
 
-  <div class="right-area">
-    <div class="right-header">
-      <div class="logo">
-        <img src="app/views/images/logo.svg" alt="Dreamview Logo">
-      </div>
-      <h1>Dreamview Affiliate Sign in</h1>
+        <div class="inner-form">
+            <form class="form">
+                <div class="row">
+                    <label>Email</label>
+                    <input type="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="row">
+                    <label>Password</label>
+                    <input type="password" name="password" required autocomplete="on">
+                </div>
+
+                <div class="row">
+                    <button type="submit" class="btn">Sign in</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-    <div class="form-wrapper">
-      <div class="form-inner">
-        <form action="/site/login" method="POST">
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-
-          <div class="form-row">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required autocomplete="current-password">
-          </div>
-
-          <div class="form-row">
-            <button type="submit" class="btn">Sign in</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
 
 `};
+
