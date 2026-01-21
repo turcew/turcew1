@@ -31,7 +31,7 @@ html, body {
 }
 
 .top-bar {
-    background: #262d38;
+    background: #3a3a3a;
     padding: 20px 32px;
     display: flex;
     justify-content: space-between;
@@ -101,6 +101,7 @@ html, body {
 .btn:hover {
     background: #1c7d82;
 }
+
 
 
 
