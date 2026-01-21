@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             self.page('/statistics');
                         }else if(['/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type=='admin'){
                             self.page('/campaigns');
-                        }else if(['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type=='user'){
+                        }else if(['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])){
                             self.page();
                         }else if(!['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])){
                             self.page();
@@ -110,4 +110,5 @@ document.addEventListener('DOMContentLoaded', function() {
     .use(router)
     .mount('#content')
 });
+
 
