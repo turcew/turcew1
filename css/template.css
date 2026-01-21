@@ -24,7 +24,7 @@ html, body {
 }
 
 #right-area {
-    width: 39%;
+    width: 40%;
     background: white;
     display: flex;
     flex-direction: column;
@@ -101,5 +101,6 @@ html, body {
 .btn:hover {
     background: #059669;
 }
+
 
 
