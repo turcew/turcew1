@@ -4,120 +4,97 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+html, body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: #f8f9fa;
-    height: 100vh;
-    overflow: hidden;
 }
 
 .flex {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
-.w40 {
+#left-area {
+    width: 60%;
+    min-height: 100vh;
+    background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
+}
+
+#right-area {
     width: 40%;
-    min-width: 420px;
     background: white;
     display: flex;
     flex-direction: column;
 }
 
-.w60 {
-    width: 60%;
-    position: relative;
-    overflow: hidden;
-}
-
-#right-area img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-.header {
-    padding: 30px 40px;
-    border-bottom: 1px solid #eee;
-}
-
-.wrapper-flex {
+.top-bar {
+    background: #262d38;
+    padding: 20px 32px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    color: white;
 }
 
-.w40-logo img {
-    height: 38px;
+.top-bar h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.top-bar .logo img {
+    height: 42px;
     width: auto;
 }
 
-.w60.ar {
-    flex: 1;
-    text-align: right;
-}
-
-.w60 h1 {
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0;
-}
-
-.inner-form {
+.form-container {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 60px;
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
+    padding: 40px 32px;
 }
 
-.row {
-    margin-bottom: 24px;
+.form .row {
+    margin-bottom: 28px;
 }
 
-label {
+.form label {
     display: block;
     margin-bottom: 8px;
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     font-weight: 500;
-    color: #444;
+    color: #1f2937;
 }
 
-input[type="email"],
-input[type="password"] {
+.form input {
     width: 100%;
     padding: 14px 16px;
+    font-size: 1.06rem;
     border: 1px solid #d1d5db;
     border-radius: 8px;
-    font-size: 1rem;
-    transition: all 0.2s;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-    outline: none;
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+.form input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
 }
 
 .btn {
     width: 100%;
     padding: 15px;
-    background: #10b981;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: white;
+    background: #10b981;
     border: none;
     border-radius: 8px;
-    font-size: 1.05rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: background 0.25s;
+    transition: background 0.2s;
 }
 
 .btn:hover {
@@ -169,3 +146,4 @@ input[type="password"]:focus {
     95% {opacity: 0.95; margin-left:-2%;}
     100% {opacity: 1; margin-left:0;}
 }
+
