@@ -91,7 +91,7 @@ html, body {
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
-    background: #10b981;
+    background: #00c477;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -99,8 +99,9 @@ html, body {
 }
 
 .btn:hover {
-    background: #059669;
+    background: #1c7d82;
 }
+
 
 
 
