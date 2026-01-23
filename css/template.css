@@ -56,273 +56,112 @@
     z-index: 9999999;
 }
 
-#left-area {
-    position: fixed;
-    width: 65%;
-    height: 100%;
-    background-color: #14213D;
-    background-size: cover;
-    background-position: center;
-    left: 0;
-    top: 0;
-    z-index: 1;
+/* Login styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#right-area {
-    position: absolute;
-    width: 35%;
+html, body {
     height: 100%;
-    background-color: #FFFFFF;
-    right: 0;
-    top: 0;
-    z-index: 2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+}
+
+.flex {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.right-area{
+    width: 40%;
+    background: white;
     display: flex;
     flex-direction: column;
 }
-
-.top-bar {
-    padding: 40px 40px 20px;
+.header {
+    background: #262d38;
+    padding: 20px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #E5E5E5;
+    color: white;
 }
 
-.top-bar h1 {
-    color: #14213D;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.top-bar .logo img {
-    height: 40px;
-}
-
-.form-container {
-    flex: 1;
-    padding: 60px 40px;
+#right-area {
+    width: 40%;
+    background: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-.form {
-    max-width: 320px;
-    margin: 0 auto;
+#left-area {
+    width: 60%;
+    min-height: 100vh;
+    background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
 }
 
-.form .row {
-    margin-bottom: 25px;
-}
-
-.form label {
-    display: block;
-    color: #14213D;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-}
-
-.form input {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #E5E5E5;
-    border-radius: 8px;
-    font-size: 14px;
-    background-color: #F8F9FA;
-    transition: border-color 0.3s ease;
-}
-
-.form input:focus {
-    outline: none;
-    border-color: #14213D;
-    background-color: #FFFFFF;
+.header {
+    background: #262d38;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
 .btn {
     width: 100%;
-    padding: 12px;
-    background-color: #14213D;
-    color: #FFFFFF;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background: #10b981;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.2s;
 }
 
 .btn:hover {
-    background-color: #0D1627;
+    background: #059669;
+}
+
+.form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 32px;
+}
+
+.inner-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.97rem;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.inner-form input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1.06rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.inner-form input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
 }
 
 /*Campaigns*/
-body {
-    background: #f5f7fa;
-    color: #2d3748;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.inside-content {
-    min-height: 100vh;
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.flex.panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 0 20px;
-    gap: 20px;
-}
-
-.w20 {
-    width: auto;
-}
-
-.w80 {
-    width: auto;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.ptb30 { padding: 30px 0; }
-.ptb20 { padding: 20px 0; }
-
-h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-    color: #1a202c;
-    white-space: nowrap;
-}
-
-.date-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-input[type="date"] {
-    padding: 8px 12px;
-    border: 1px solid #cbd5e0;
-    border-radius: 6px;
-    font-size: 14px;
-    background: white;
-    color: #2d3748;
-}
-
-input[type="date"]:focus {
-    outline: none;
-    border-color: #4299e1;
-    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
-}
-
-.table {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    overflow: hidden;
-    margin: 0 auto 40px;
-    max-width: 100%;
-    width: fit-content;
-}
-
-table {
-    width: 100%;
-    min-width: 900px;
-    border-collapse: collapse;
-}
-
-thead {
-    background: #f8fafc;
-}
-
-th {
-    text-align: center;
-    padding: 14px 16px;
-    font-weight: 600;
-    font-size: 13px;
-    color: #4a5568;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-th.id,
-th.actions {
-    width: 1%;
-    white-space: nowrap;
-}
-
-tbody tr {
-    border-bottom: 1px solid #edf2f7;
-    transition: background 0.12s;
-}
-
-tbody tr:hover {
-    background: #f8fafc;
-}
-
-td {
-    padding: 16px;
-    font-size: 15px;
-    color: #2d3748;
-    text-align: center;
-}
-
-td.id {
-    color: #718096;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-td a {
-    color: #3182ce;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-}
-
-td a:hover {
-    color: #2b6cb0;
-    text-decoration: underline;
-}
-
-.actions a {
-    color: #718096;
-    margin: 0 8px;
-    font-size: 17px;
-    transition: color 0.15s;
-}
-
-.actions a:hover {
-    color: #e53e3e;
-}
-
-.actions a:nth-child(2):hover {
-    color: #38a169;
-}
-
-.empty {
-    text-align: center;
-    padding: 80px 20px;
-    color: #718096;
-    font-size: 17px;
-}
-
 
 /* Popup styles */
 .popup-back {
