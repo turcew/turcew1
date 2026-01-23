@@ -76,42 +76,6 @@ html, body {
     width: 100vw;
 }
 
-.right-area{
-    width: 40%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-}
-.header {
-    background: #262d38;
-    padding: 20px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-#right-area {
-    width: 40%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-}
-
-#left-area {
-    width: 60%;
-    min-height: 100vh;
-    background: #000 url('app/views/images/Cover_1.jpg') center/cover no-repeat;
-}
-
-.header {
-    background: #262d38;
-    padding: 20px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
 
 .btn {
     width: 100%;
@@ -219,3 +183,4 @@ html, body {
     max-height: calc(100vh - 100px);
     overflow-y: auto;
 }
+
