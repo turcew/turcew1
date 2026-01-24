@@ -229,3 +229,109 @@ h1{
 @media(min-width: 320px) {
     
 }
+
+/* ===== CAMPAIGNS PAGE STYLES ===== */
+
+.inside-content {
+    padding: 20px 0;
+}
+
+.panel {
+    background: white;
+    border-radius: 0;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.ptb30 {
+    padding: 30px 0;
+}
+
+.ptb20 {
+    padding: 20px 0;
+}
+
+.panel h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+input[type="date"] {
+    border: 1px solid #D4D9DF;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: white;
+}
+
+/* ===== TABLE STYLES ===== */
+
+.table {
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 0;
+}
+
+thead {
+    background: white;
+}
+
+thead tr th {
+    border-bottom: 1px solid #D4D9DF;
+    padding: 15px 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+}
+
+tbody tr {
+    background: white;
+}
+
+tbody tr td {
+    border-bottom: 1px solid #D4D9DF;
+    padding: 15px 10px;
+    text-align: left;
+}
+
+.id {
+    text-align: center;
+    min-width: 60px;
+}
+
+.actions {
+    min-width: 80px;
+    text-align: center;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #F6F9FE;
+}
+
+.empty {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    background: white;
+}
