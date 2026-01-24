@@ -1,7 +1,7 @@
 export const popup = {
     props:['title','fullscreen'],
     data(){
-        return {active:0, top:0, widthVal:'500px', ml:'-250px', left: '50%', 'height':'auto'}
+        return {active:0,top:0,widthVal:'500px',ml:'-250px',left: '50%','height':'auto'}
     },
     watch:{
         active:function(o,n){
@@ -14,10 +14,10 @@ export const popup = {
             }
             if(this.fullscreen){
                 this.top = 0;
-                this.widthVal = "100%";
+                this.widthVal = '100%';
                 this.ml = 0;
                 this.left = 0;
-                this.height = "100%";
+                this.height ='100%';
             }
         }
     },
@@ -39,4 +39,4 @@ export const popup = {
             </div>
         </template>
     `
-}
+};

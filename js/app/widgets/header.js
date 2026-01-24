@@ -17,7 +17,7 @@ export const header = {
     },
     template:`
         <header class="header">
-            <msg ref="msg" />
+            <msg ref="msg"/>
         </header>
     `
 };

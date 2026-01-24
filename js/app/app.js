@@ -1,8 +1,8 @@
 import {router} from './router.js';
-import {header} from './widgets/header.js';
 //import {search} from './widgets/search.js';
 import {popup} from './widgets/popup.js';
 import {msg} from './widgets/msg.js';
+import {header} from './widgets/header.js';
 //import {toogle} from './widgets/toogle.js';
 //import {img} from './widgets/img.js';
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return {
                 url:"https://affiliate.yanbasok.com",
                 user:{name:"", phone:"", email:"", date:"", auth:""},
-                FormData:{},
+                formData:{},
                 title:"",
                 date:"",
                 time:"",
@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         watch: {
             $route:function() {
-                this.innit();
+                this.init();
             }
         },
         mounted(){
-            this.innit();
+            this.init();
         },
         methods: {
-            innit(){
+            init(){
                 var self = this;
-                if(window.localStorage.getItem("user")) self.user = JSON.parse(window.localStorage.getItem("user"));
+                if(window.localStorage.getItem('user')) self.user = JSON.parse(window.localStorage.getItem('user'));
 
                 router.isReady().then(() => {
                     if(window.localStorage.getItem("user")){
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             self.page('/statistics');
                         }else if(['/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type=='admin'){
                             self.page('/campaigns');
-                        }else if(['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path']) && self.user.type=='user'){
+                        }else if(['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])){
                             self.page();
                         }else if(!['/campaigns', '/campaign', '/users', '/user', '/statistics', '/payments', '/sites'].includes(self.$route['path'])){
                             self.page();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             logout(){
                 this.user = {name:"", phone:"", email:"", date:"", auth:""};
                 this.page('/');
-                window.localStorage.setItem("user", '');
+                window.localStorage.setItem('user', '');
             },
             scrollTop(){
                 setTimeout(function(){

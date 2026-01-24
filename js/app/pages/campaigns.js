@@ -20,8 +20,6 @@ export const campaigns = {
         if(!this.parent.user){
             this.parent.logout();
         }
-        //this.$refs.msg.successFun("Successfully updated campaign!");
-        //console.log(this.parent.formData.all);
         this.get();
         this.GetFirstAndLastDate();
     },
@@ -41,7 +39,7 @@ export const campaigns = {
             if(this.date!="") data.append("date",this.date);
             if(this.date2!="") data.append("date2",this.date2);
             self.loader=1;
-            axios.post(this.parent.url+"/site/getCampaigns?auth"+this.parent.user.auth,data).then(function(response){
+            axios.post(this.parent.url+"/site/getCampaigns?auth="+this.parent.user.auth,data).then(function(response){
                 self.data = response.data;
                 self.loader=0;
             }).catch(function(error){
@@ -54,12 +52,12 @@ export const campaigns = {
             self.parent.formData.copy = "";
             var data = self.parent.toFormData(self.parent.formData);
 
-            axios.post(this.parent.url+"/site/getCampaigns?auth"+this.parent.user.auth,data).then(function(response){
+            axios.post(this.parent.url+"/site/getCampaigns?auth="+this.parent.user.auth,data).then(function(response){
                 self.$refs.new.active=0;
                 if(self.parent.formData.id){
-                    self.$refs.header.msg.successFun("Successfully updated campaign!");
+                    self.$refs.header.$refs.msg.successFun("Successfully updated campaign!");
                 }else{
-                    self.$refs.header.msg.successFun("Successfully added a new campaign!");
+                    self.$refs.header.$refs.msg.successFun("Successfully added a new campaign!");
                 }
 
                 self.get();
@@ -68,7 +66,7 @@ export const campaigns = {
             });
         },
         del:async function () {
-            if(await this.$refs.header.msg.confirmFun("Please confirm your next action", "Do you want to delete this campaign?")) {
+            if(await this.$refs.header.$refs.msg.confirmFun("Please confirm your next action","Do you want to delete this campaign?")) {
                 var self = this;
                 var data = self.parent.toFormData(self.parent.formData);
 
@@ -95,7 +93,7 @@ export const campaigns = {
                     <h1>Campaigns</h1>
                 </div>
                 <div class="w80 ptb20 ac"><input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
-                <div class="w20 al ptb20"
+                <div class="w20 al ptb20">
 
                 </div>
             </div>
@@ -117,6 +115,10 @@ export const campaigns = {
                     <tbody>
                         <tr v-for="(item,i) in data.items">
                             <td class="id">{{item.id}}</td>
+                            <td class="id">
+                            
+                            </td>
+                            <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>
                             <td class="id">
                                 <a href="#" @click.prevent="$refs.details.active=1;getDetails(item.id,1)">
                                     {{item.views}}
@@ -154,5 +156,4 @@ export const campaigns = {
             </div>
         </div>
     </div>
-    `
-};
+`};

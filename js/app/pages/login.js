@@ -24,7 +24,7 @@ export const login = {
                 if(response.data.user){
                     self.parent.user = response.data.user;
                     self.parent.page('/campaigns');
-                    window.localStorage.setItem("user", JSON.stringify(response.data.user));
+                    window.localStorage.setItem('user', JSON.stringify(self.parent.user));
                 }
             }).catch(function(error){
                 console.log('errors: ', error);
@@ -34,7 +34,7 @@ export const login = {
     template:`
     <div class="flex">
         <msg ref="msg"/>
-        <div id="right-area" class="w40">
+        <div id="left-area" class="w40">
             <div class="header">
                 <div class="wrapper flex">
                     <div class="w40 logo">
@@ -64,7 +64,7 @@ export const login = {
                 </form>
             </div>
         </div>
-        <div id="left-area" class="w60">
+        <div id="right-area" class="w60">
             <img :src="parent.url+'/app/views/images/Cover_'+img+'.jpg'" />
         </div>
     </div>
