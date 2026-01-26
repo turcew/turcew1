@@ -3,7 +3,7 @@ import {router} from './router.js';
 import {popup} from './widgets/popup.js';
 import {msg} from './widgets/msg.js';
 import {header} from './widgets/header.js';
-//import {toogle} from './widgets/toogle.js';
+import {toogle} from './widgets/toogle.js';
 //import {img} from './widgets/img.js';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .component('popup', popup)
     //.component('search', search)
     .component('msg', msg)
-    //.component('toogle', toogle)
+    .component('toogle', toogle)
     //.component('Image', img)
     .use(router)
     .mount('#content')
