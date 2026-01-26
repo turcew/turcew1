@@ -1,127 +1,12 @@
-/*Switch*/
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 15px;
-}
-
-.switch input {display:none;}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: .4s;
-}
-
-.slider.round{
-    border-radius: 34px;
-}
-
-.slider.round:before{
-    border-radius: 34px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 17px;
-    width: 17px;
-    left: 0;
-    bottom: -1px;
-    background-color: white;
-    transition: .4s;
-    box-shadow: 0px 0 10px 0px rgba(70, 70, 70, 0.3);
-}
-
-input:checked + .slider {
-  background-color: #00cb84;
-}
-
-input:checked + .slider:before {
-    -webkit-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    transform: translateX(16px);
-}
-
-input:focus + .slider{
-    box-shadow: 0 0 1px #00CB84;
-}
-
-.image-preview-area{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    min-height: 125px;
-    min-width: 125px;
-    padding: 0;
-    height: auto;
-    text-align: center;
-    position: relative;
-    border: 1px solid #e5e5e5;
-    position: relative;
-}
-
-.image-preview-area a{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.image-preview-area a img{
-    top: 50%;
-    position: relative;
-    margin-top: -24px;
-}
-
-/*Menu*/
-
-#menu li a{
-    font-size: 18px;
-    color: #fff;
-    padding: 27px;
-    display: block;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-bottom: 5px solid #432242;
-}
-
-#menu li a.router-link-active{
-    color: #00CB84;
-    border-bottom: 5px solid #00CB84;
-}
-
-#spinner{
-    background: #919fa640 url(../images/loader.gif) no-repeat;
-    background-position: center;
-    background-size: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-}
-
 *:focus{outline:none;}
 *{box-sizing:border-box;}
 
 html{overflow-x:hidden;}
 
 body{
-    font:normal 12px/18px OpenSansHebrewRegular, Tahoma, Arial, sans-serif;
+    font:normal 12px/18px Tahoma,Arial,sans-serif;
     margin:0;
     width:100%;
-    direction: rtl;
     background:#F4F9FC;
     color:#333;
 }
@@ -136,37 +21,8 @@ a:hover{color:#00CB84;}
 
 h1{
     margin:0;
-    font-size:14px;
+    font-size:24px;
 }
-
-h2{
-    font-size: 18px;
-}
-
-.p5{
-    padding:5%;
-}
-
-.p10{
-    padding:10%;
-}
-
-.p25{
-    padding:25%;
-}
-
-.p30{
-    padding:30%;
-}
-
-.p40{
-    padding:40%;
-}
-
-.p50{
-    padding:50%;
-}
-
 
 .flex{
     display:flex;
@@ -181,18 +37,14 @@ h2{
 
 .wrapper{
     max-width:1200px;
-    margin: 0 auto;
+    margin:0 auto;
     padding:0 15px;
     width:100%;
+    align-items: center;
 }
 
-.w10{width: 10%;}
-.w20{width: 20%;}
-.w30{width: 30%;}
 .w40{width:40%;}
-.w50{width: 50%;}
 .w60{width:60%;}
-.w70{width: 70%;}
 .w100{width:100%;}
 
 .al{text-align:left;}
@@ -215,6 +67,8 @@ h2{
 
 .header .logo{
     padding:5px 0;
+    display: flex;        
+    justify-content: flex-end;
 }
 
 .header h1{
@@ -270,51 +124,6 @@ h2{
 
 /* ===== ALERTS ===== */
 
-.alertMsg {
-    font-size: inherit;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 5%;
-    left: 2%;
-    border-radius: 10px;
-    z-index: 999;
-    height: auto;
-    display: none;
-    color: red;
-    background-color: rgba(255, 228, 228, 0.75);
-    box-shadow: 0px 0 10px 0px rgba(205, 30, 11, 0.5);
-    animation: showFromLeft 0.3s linear;
-}
-
-.successMsg{
-    font-size: inherit;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 5%;
-    left: 2%;
-    border-radius: 10px;
-    z-index: 999;
-    height: auto;
-    display: none;
-    color: green;
-    background-color: rgba(218, 249, 223, 0.75);
-    box-shadow: 0px 0 10px 0px rgb(11 205 61 / 50%);
-    animation: showFromLeft 0.3s normal;
-}
-
-@keyframes showFromLeft {
-    0% {opacity: 0; margin-left:-100%;}
-    25% {opacity: 0.2; margin-left:-50%;}
-    35% {opacity: 0.4; margin-left:-20%;}
-    50% {opacity: 0.8; margin-left:-15%;}
-    65% {opacity: 0.9; margin-left:-12%;}
-    75% {opacity: 0.9; margin-left:-10%;}
-    80% {opacity: 0.9; margin-left:-8%;}
-    85% {opacity: 0.95; margin-left:-6%;}
-    90% {opacity: 0.95; margin-left:-4%;}
-    95% {opacity: 0.95; margin-left:-2%;}
-    100% {opacity: 1; margin-left:0;}
-}
 
 /* ===== LOGIN LAYOUT ===== */
 
@@ -327,8 +136,6 @@ h2{
     width:100%;
     height:100%;
     object-fit:cover;
-    overflow-clip-margin: content-box;
-    overflow: clip; /*aaaaaaaaaaaa*/
 }
 
 #left-area{
