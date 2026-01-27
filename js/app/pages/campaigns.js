@@ -52,7 +52,7 @@ export const campaigns = {
             self.parent.formData.copy = "";
             var data = self.parent.toFormData(self.parent.formData);
 
-            axios.post(this.parent.url+"/site/getCampaign?auth="+this.parent.user.auth,data).then(function(response){
+            axios.post(this.parent.url+"/site/actionCampaign?auth="+this.parent.user.auth,data).then(function(response){
                 self.$refs.new.active=0;
                 if(self.parent.formData.id){
                     self.$refs.header.$refs.msg.successFun("Successfully updated campaign!");
