@@ -53,6 +53,7 @@
                             <div id="user-info" :class="{active:active==1}">
                                 <a href="#" @click.prevent="parent.logout();"><i class="fas fa-sign-out-alt"></i> {{parent.user.user}} Log out</a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
