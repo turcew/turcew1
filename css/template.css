@@ -444,6 +444,16 @@ h2{
     }
 }
 
+.cubes .views{
+    background-color: #5000B8;
+    color:#fff;
+}
+
+.cubes .leads{
+    background-color: #379D00;
+    color:#fff;
+}
+
 @media(max-width: 480px) {
     .popup {
         margin: 10px !important;
@@ -456,6 +466,22 @@ h2{
     }
 }
 
-@media(min-width: 320px) {
+@media(max-width: 868px) {
+    .fas .fa-chart-bar{
+        display: none;
+    }
+    .flex.panel{
+        display: block;
+    }
+    .flex.panel >div{
+        width: 100% !important;
+    }
+    .header .logo{
+        width: calc(100% - 80px);
+        text-align: left;
+    }
+}
+
+@media(min-width: 1025px) {
     
 }

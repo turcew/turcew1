@@ -443,14 +443,14 @@ export const campaign = {
                         <tr v-for="(item,i) in data.items">
                             <td class="id">{{item.id}}</td>
                             <td class="id">
-                                <toogle :modelValue="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd();"> <!-- Не завершено -->
+                                <toogle :modelValue="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd();">
                             </td>
                             <td class="image">
                                 <a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">
                                     <img :src="item.img" />
                                 </a>
                             </td>
-                            <td class="image"><a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">{{item.campaign_title}}</a></td> <!-- Не завершено -->
+                            <td class="image"><a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">{{item.campaign_title}}</a></td>
                             <td class="image"><a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">{{item.size}}</a></td>
                             <td><a href="#" @click.prevent="parent.formData = item;$refs.ad.active=1;">{{item.link}}</a></td>
                             <td class="id">
