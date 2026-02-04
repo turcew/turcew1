@@ -20,7 +20,7 @@ export const payments = {
             var data = self.parent.toFormData(self.parent.formData);
             data.append('id',this.parent.user.id);
             self.loader=1;
-            axios.post(this.parent.url+"/site/getPayment?auth="+this.parent.user.auth,data).then(function(response){
+            axios.post(this.parent.url+"/site/getPayments?auth="+this.parent.user.auth,data).then(function(response){
                 self.loader=0;
                 self.data = response.data;
             }).catch(function(error){
